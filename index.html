@@ -1,52 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chatrio – Chat Your Way</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatrio – Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+    header img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #374151;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 3rem auto;
+      max-width: 900px;
+      padding: 0 1rem;
+    }
+    .feature {
+      flex: 1 1 250px;
+      background: white;
+      margin: 0.5rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .feature h3 {
+      color: #2563eb;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .waitlist {
+      text-align: center;
+      padding: 2rem;
+      background: #eef2ff;
+    }
+    .waitlist h2 {
+      margin-bottom: 1rem;
+      color: #111827;
+    }
+    .waitlist form {
+      display: flex;
+      justify-content: center;
+      max-width: 400px;
+      margin: auto;
+    }
+    .waitlist input {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+    }
+    .waitlist button {
+      padding: 0.75rem 1rem;
+      background: #2563eb;
+      border: none;
+      color: white;
+      font-weight: 600;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .waitlist button:hover {
+      background: #1d4ed8;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center p-6">
-    <img src="icon.png" alt="Chatrio Logo" class="w-24 h-24 mb-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Chatrio</h1>
-    <p class="text-xl md:text-2xl mb-6">Chat Your Way – Privacy. Speed. Simplicity.</p>
+<body>
 
-    <!-- Coming Soon -->
-    <div class="bg-white shadow-lg rounded-2xl p-6 max-w-md w-full">
-      <p class="mb-4 text-lg">We’re launching soon! 🚀<br>Sign up to get early access.</p>
-      <form class="flex flex-col sm:flex-row gap-3">
-        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
-        <button type="submit" class="px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">Notify Me</button>
-      </form>
+  <header>
+    <img src="logo.png" alt="Chatrio Logo">
+    <h1>Chatrio</h1>
+    <p>Private. Lightweight. Global.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🔒 Privacy First</h3>
+      <p>Your conversations are safe and secure, always.</p>
     </div>
-
-    <!-- Features Preview -->
-    <div class="mt-12 grid gap-6 sm:grid-cols-3 max-w-4xl">
-      <div class="bg-white shadow rounded-xl p-6">
-        <h3 class="text-xl font-bold mb-2">🔒 Privacy First</h3>
-        <p>End-to-end encryption to keep your chats safe.</p>
-      </div>
-      <div class="bg-white shadow rounded-xl p-6">
-        <h3 class="text-xl font-bold mb-2">⚡ Lightweight</h3>
-        <p>Fast, smooth, and easy on your device storage.</p>
-      </div>
-      <div class="bg-white shadow rounded-xl p-6">
-        <h3 class="text-xl font-bold mb-2">🌍 Local Languages</h3>
-        <p>Chat in your language – global and local support.</p>
-      </div>
+    <div class="feature">
+      <h3>⚡ Super Lightweight</h3>
+      <p>Fast performance with minimal data usage.</p>
+    </div>
+    <div class="feature">
+      <h3>🌍 Multilingual Support</h3>
+      <p>Chat in your own language, anywhere in the world.</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm">
-    © <span id="year"></span> Chatrio. All rights reserved.
+  <section class="waitlist">
+    <h2>🚀 Join the Waitlist</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Chatrio. All rights reserved.
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
